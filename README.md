@@ -27,20 +27,20 @@ $ open http://localhost:8080
 ## Project Structure
 
 ```
-├── public									# static resources
-│  └──img 								    # images and favicon
-├──  server
+├── public                                  # static resources
+│  └──img                                   # images and favicon
+├── server
 │   ├── api_server                          # API server
-│   │   ├──  database
-│   │   │	├── config.js                   # database config
-│   │   │	├── mock.js                     # create mock data when using SQLite
+│   │   ├── database
+│   │   │   ├── config.js                   # database config
+│   │   │   ├── mock.js                     # create mock data when using SQLite
 │   │   │   └──  model.js                   # define sequelize models
 │   │   ├── graphql
-│   │   │	├── context.js				    # graphql server context
-│   │   │	├── resolvers.js				# graphql server resolvers
+│   │   │   ├── context.js                  # graphql server context
+│   │   │   ├── resolvers.js                # graphql server resolvers
 │   │   │   └── schema.js                   # graphql server schema
 │   │   ├── routes
-│   │   │	├── login.js                    # privide user login service, using jwt
+│   │   │   ├── login.js                    # privide user login service, using jwt
 │   │   │   └── logout.js                   # privide user logout service
 │   │   └── index.js                        # API server set-up and config
 │   ├── web_server
@@ -60,7 +60,7 @@ $ open http://localhost:8080
 │   │   ├── types.ts                        # define interfaces
 │   │   └── environments.ts                 # read enviroment config from .env
 │   └── index.tsx                           # launch the app
-├── .env									# environment variables of the whole app
+├── .env                                    # environment variables of the whole app
 └── tsconfig.json                           # typescript configuration
 ```
 
