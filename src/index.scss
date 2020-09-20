@@ -1,0 +1,86 @@
+html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+#root {
+  height: 100%;
+}
+
+/**
+* For covering antd global style pollution
+**/
+*,
+*::before,
+*::after {
+  box-sizing: unset;
+}
+
+.ant-tabs-tab {
+  padding: 13px 20px !important;
+  margin: 0;
+}
+
+.ant-tabs-ink-bar {
+  background: #646464 !important;
+}
+
+.ant-tabs-tab-active .tab-header {
+  color: #646464 !important;
+}
+
+.ant-tabs-nav {
+  margin-bottom: 0 !important;
+}
+
+a {
+  color: inherit !important;
+}
+
+/**
+* Common style using globally
+**/
+.fix-overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.my-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: fit-content;
+  min-width: 55px;
+  padding: 0 12px;
+  height: 37px;
+  line-height: 24px;
+  border-radius: 20px;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.vertical-middle {
+  display: flex;
+  align-items: center;
+}
+
+.has-link {
+  cursor: pointer;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  margin: 16px 0;
+  background-color: #eee;
+}

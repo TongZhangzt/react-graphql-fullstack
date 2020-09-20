@@ -1,0 +1,15 @@
+@media (min-width: 992px) {
+  .error-component {
+    width: 960px;
+  }
+}
+
+@media (max-width: 990px) {
+  .error-component {
+    width: 750px;
+  }
+}
+
+.error-component {
+  margin: 56px auto;
+}

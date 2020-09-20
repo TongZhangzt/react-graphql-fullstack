@@ -1,0 +1,31 @@
+{
+  "name": "react-graphql-server",
+  "author": "Tong Zhang",
+  "version": "1.0.0",
+  "keywords": [
+    "Express.js",
+    "GraphQL",
+    "Apollo",
+    "MySQL",
+    "SQLite"
+  ],
+  "description": "An API server built with Express.js + GraphQL(Apollo) + MySQL/SQLite",
+  "main": "api_server/index.js",
+  "engines": {
+    "node": ">= 8.11.0",
+    "npm": ">= 6.0.0"
+  },
+  "dependencies": {
+    "apollo-server": "^2.16.1",
+    "apollo-server-express": "^2.16.1",
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^6.3.5",
+    "sqlite3": "^5.0.0"
+  },
+  "devDependencies": {
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "jsonwebtoken": "^8.5.1"
+  }
+}

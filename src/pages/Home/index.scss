@@ -1,0 +1,145 @@
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media (max-width: 990px) {
+  .container {
+    width: 750px;
+  }
+}
+
+.container {
+  margin: 56px auto;
+  padding-top: 30px;
+
+  .ant-carousel {
+    margin-bottom: 20px;
+  }
+
+  .board > div {
+    width: 100%;
+    margin-bottom: 6px;
+    border-radius: 4px;
+    height: 50px;
+    padding-left: 2rem;
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  .download-qrcode {
+    display: flex;
+    border: 1px solid #f0f0f0;
+    border-radius: 6px;
+    padding: 10px 22px;
+    margin-top: 10px;
+
+    img {
+      width: 4rem;
+    }
+
+    .info {
+      margin: 7px;
+
+      .title {
+        font-size: 15px;
+        color: #333;
+
+        i {
+          font-size: 12px;
+          font-weight: 800;
+        }
+      }
+
+      .description {
+        margin-top: 4px;
+        font-size: 13px;
+        color: #999;
+      }
+    }
+  }
+
+  .recommended-authors {
+    margin-top: 30px;
+
+    .title {
+      font-size: 14px;
+      color: #969696;
+      margin-bottom: 10px;
+
+      .refresh {
+        float: right;
+
+        i {
+          font-size: 12px;
+          margin-right: 5px;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .list {
+      .author-item {
+        margin-bottom: 15px;
+        display: flex;
+
+        img {
+          width: 3rem;
+          height: 3rem;
+          margin-right: 8px;
+          border-radius: 50%;
+        }
+
+        .info {
+          flex-grow: 1;
+
+          .meta {
+            margin-top: 2px;
+            font-size: 12px;
+            color: #969696;
+          }
+
+          .name {
+            color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            line-height: 24px;
+
+            .follow-button {
+              margin-top: 5px;
+              font-size: 13px;
+              color: #42c02e;
+
+              i {
+                font-size: 13px;
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .more-authors {
+      padding: 7px 7px 7px 12px;
+      left: 0;
+      width: 100%;
+      font-size: 13px;
+      color: #787878;
+      background-color: #f7f7f7;
+      border: 1px solid #dcdcdc;
+      border-radius: 4px;
+      text-align: center;
+      margin-top: 18px;
+
+      i {
+        font-size: 8px;
+        position: relative;
+        font-weight: 800;
+        bottom: 1px;
+      }
+    }
+  }
+}
