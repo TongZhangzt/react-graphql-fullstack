@@ -1,4 +1,4 @@
-# React + Express.js + Graghql Fullstack Demo App
+# React + GraghQL + MySQL Fullstack blogpost web App
 
 A full-stack blog-post web app built with React.js(Typescript) + Redux on the frontend side and Express.js + GraphQL + MySQL/SQLite on the backend side.
 
@@ -16,13 +16,21 @@ $ open http://localhost:8080
 
 ### Run API server with MySQL Database
 
-1. Install, config and run MySQL database on you locally environment
+1. Install, config and run MySQL database on you local environment
 2. Create a database and import the sql file under `/server/api_server/database.sql`
 3. Update the `DB_TYPE`,`DB_NAME`, `DB_USER`, `DB_PASSWORD` in the `.env` file
 4. Run the above commands
 
-- After running, you can tryout the API and view the document at `http://localhost:4000/graphql`
+- After running, you can tryout the API and view the document at `http://localhost:4000/api/graphql`
 - You can update the mock data in `/server/api_server/database/mock.js` file
+
+### Build for production
+
+```bash
+$ npm run build
+```
+
+- After running, there should now be a dist folder in the project root.
 
 ## Project Structure
 

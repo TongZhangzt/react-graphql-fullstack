@@ -7,12 +7,15 @@ const dotenv = require('dotenv');
 const app = express();
 dotenv.config();
 
+const dist = './dist/';
 if (process.env.MODE !== 'production') {
   const entry = path.join(__dirname, '../../src/index.html');
   // clear dist dir first
-  fs.rmdirSync('./dist/', { recursive: true });
+  if (fs.existsSync(dist)) {
+    fs.rmdirSync(dist, { recursive: true });
+  }
   let parcel = new Bundler(entry, {
-    outDir: './dist',
+    outDir: dist,
     logLevel: 1,
     hmr: false,
   });

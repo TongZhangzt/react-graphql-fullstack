@@ -15,7 +15,7 @@
     "build": "npm run clean && parcel build --log-level 1 src/index.html",
     "server": "nodemon --watch server/api_server ./server/api_server/index.js",
     "dev": "nodemon --watch src -e ts,tsx,scss ./server/web_server/index.js",
-    "clean": "rm -rf dist",
+    "clean": "rm -rf .cache dist",
     "postinstall": "cd server && npm install",
     "prettify": "prettier --write './src/**/*.{ts,tsx}'",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
