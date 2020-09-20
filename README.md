@@ -27,41 +27,41 @@ $ open http://localhost:8080
 ## Project Structure
 
 ```
-├── public										   # static resources
-│  └──img 										 # images and favicon
+├── public									# static resources
+│  └──img 								    # images and favicon
 ├──  server
-│   ├── api_server                              # API server
+│   ├── api_server                          # API server
 │   │   ├──  database
-│   │   │	├── config.js                    # database config
+│   │   │	├── config.js                   # database config
 │   │   │	├── mock.js                     # create mock data when using SQLite
-│   │   │   └──  model.js                    # define sequelize models
+│   │   │   └──  model.js                   # define sequelize models
 │   │   ├── graphql
-│   │   │	├── context.js				  # graphql server context
+│   │   │	├── context.js				    # graphql server context
 │   │   │	├── resolvers.js				# graphql server resolvers
 │   │   │   └── schema.js                   # graphql server schema
 │   │   ├── routes
-│   │   │	├── login.js                      # privide user login service, using jwt
-│   │   │   └── logout.js                     # privide user logout service
-│   │   └── index.js                            # API server set-up and config
+│   │   │	├── login.js                    # privide user login service, using jwt
+│   │   │   └── logout.js                   # privide user logout service
+│   │   └── index.js                        # API server set-up and config
 │   ├── web_server
-│   │   └──  index.js                           # web server setup with Parcel.js
+│   │   └──  index.js                       # web server setup with Parcel.js
 ├── src
-│   ├── api                                         # client side Graphql
-│   │   ├── interfaces.ts                     # defines interfaces used in graphql
-│   │   ├── schema.ts                        # defines graphql schema
-│   │   ├── mutations.ts                     # defines graphql schema
-│   │   ├── queries.ts                    	 # defines graphql schema
-│   ├── pages                                    # routing pages
-│   │   └── router.tsx                         # router config and setup
-│   ├── components                           # common UI components
-│   │   └──  AuthComponent              # routing authentication component
-│   ├── store                               	   # Redux setup
+│   ├── api                                 # client side Graphql
+│   │   ├── interfaces.ts                   # defines interfaces used in graphql
+│   │   ├── schema.ts                       # defines graphql schema
+│   │   ├── mutations.ts                    # defines graphql schema
+│   │   ├── queries.ts                    	# defines graphql schema
+│   ├── pages                               # routing pages
+│   │   └── router.tsx                      # router config and setup
+│   ├── components                          # common UI components
+│   │   └──  AuthComponent                  # routing authentication component
+│   ├── store                               # Redux setup
 │   ├── utils
-│   │   ├── types.ts                        	# define interfaces
-│   │   └── environments.ts                # read enviroment config from .env
-│   └── index.tsx                            	 # launch the app
-├── .env											  # environment variables of the whole app
-└── tsconfig.json                            	 # typescript configuration
+│   │   ├── types.ts                        # define interfaces
+│   │   └── environments.ts                 # read enviroment config from .env
+│   └── index.tsx                           # launch the app
+├── .env									# environment variables of the whole app
+└── tsconfig.json                           # typescript configuration
 ```
 
 ## Features
