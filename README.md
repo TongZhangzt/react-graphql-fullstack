@@ -50,7 +50,7 @@ $ open http://localhost:8080
 │   │   ├── interfaces.ts                   # defines interfaces used in graphql
 │   │   ├── schema.ts                       # defines graphql schema
 │   │   ├── mutations.ts                    # defines graphql schema
-│   │   ├── queries.ts                    	# defines graphql schema
+│   │   ├── queries.ts                      # defines graphql schema
 │   ├── pages                               # routing pages
 │   │   └── router.tsx                      # router config and setup
 │   ├── components                          # common UI components
