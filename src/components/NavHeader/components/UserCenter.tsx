@@ -2,10 +2,10 @@ import * as React from 'react';
 import { message } from 'antd';
 import { Dispatch } from 'react-redux';
 
-import { logoutAction } from '../../store/actions';
-import { avatars } from '../../utils/images';
-import { User } from '../../utils/types';
-import environments from '../../utils/environments';
+import { logoutAction } from '../../../store/actions';
+import { avatars } from '../../../utils/images';
+import { User } from '../../../utils/types';
+import environments from '../../../utils/environments';
 
 interface UserCenterProps {
   history: any;
