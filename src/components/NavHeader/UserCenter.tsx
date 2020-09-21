@@ -13,7 +13,7 @@ interface UserCenterProps {
   dispatch: Dispatch;
 }
 
-const UserCenter: React.FunctionComponent<UserCenterProps> = ({
+export const UserCenter: React.FunctionComponent<UserCenterProps> = ({
   history,
   user,
   dispatch,
@@ -102,5 +102,3 @@ const UserCenter: React.FunctionComponent<UserCenterProps> = ({
     </div>
   );
 };
-
-export default UserCenter;

@@ -4,7 +4,7 @@ interface SearchBarProps {
   placeholder?: string;
 }
 
-const SearchBar: React.FunctionComponent<SearchBarProps> = props => {
+export const SearchBar: React.FunctionComponent<SearchBarProps> = props => {
   return (
     <div className="search-bar">
       <input placeholder={props.placeholder || '搜索'} />
@@ -12,5 +12,3 @@ const SearchBar: React.FunctionComponent<SearchBarProps> = props => {
     </div>
   );
 };
-
-export default SearchBar;

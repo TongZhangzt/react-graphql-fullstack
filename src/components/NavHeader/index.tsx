@@ -3,8 +3,8 @@ import { Popover } from 'antd';
 import { connect, Dispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
-import SearchBar from './Searchbar';
-import UserCenter from './UserCenter';
+import { SearchBar } from './Searchbar';
+import { UserCenter } from './UserCenter';
 import { User, UIState } from '../../utils/types';
 import { navbarImgs } from '../../utils/images';
 import './index.scss';
