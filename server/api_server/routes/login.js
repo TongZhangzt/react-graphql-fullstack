@@ -60,8 +60,6 @@ router.post('/login', async (req, res, next) => {
 
     res.cookie('jwt', token, {
       httpOnly: true,
-      domain: 'localhost',
-      // sameSite: 'none',
       // secure: true, //on HTTPS
       maxAge: 604800000,
     });
@@ -70,8 +68,6 @@ router.post('/login', async (req, res, next) => {
     // on client side
     res.cookie('session_expire', new Date().getTime() + 604800000, {
       httpOnly: false,
-      domain: 'localhost',
-      // sameSite: 'none',
       // secure: true, //on HTTPS
     });
 
