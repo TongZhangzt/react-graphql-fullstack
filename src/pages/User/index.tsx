@@ -84,10 +84,6 @@ const UserPage: React.FunctionComponent<UserProps> = ({
   // fetch user data from API
   const { loading, error, data } = fullUserInfoQuery(id);
 
-  if (error) {
-    return <ErrorComponent />;
-  }
-
   const showFollowButton: (id: number) => boolean = React.useCallback(
     id =>
       !loggedInUser ||
@@ -122,6 +118,22 @@ const UserPage: React.FunctionComponent<UserProps> = ({
     link: (id: number) => string,
   ) => () => void | null = link => () =>
     link ? history.push(link(data.User.id)) : null;
+
+  if (error) {
+    return <ErrorComponent />;
+  }
+
+  if (!loading && !data.User) {
+    return (
+      <ErrorComponent
+        status="404"
+        title="抱歉，你访问的页面不存在"
+        buttonText="返回首页"
+        onRefresh={() => history.push('/')}
+        subTitle="可能是因为您的链接地址有误、该用户已注销"
+      />
+    );
+  }
 
   return (
     <div className="user-center">

@@ -40,20 +40,16 @@ const Post: React.FunctionComponent<PostProps> = ({
 
   // fetch post details
   const { loading, error, data } = postDetailQuery(+id, data => {
-    setLikes(data.Post.like_count);
+    setLikes(data?.Post?.like_count);
   });
 
   // fetch comments
   const commentsData = postCommentsQuery(+id);
 
-  if (error || (commentsData && commentsData.error)) {
-    return <ErrorComponent />;
-  }
-
   // update document title
   React.useEffect(() => {
     if (data?.Post) {
-      document.title = data.Post.title + ' - 博客';
+      document.title = data.Post?.title + ' - 博客';
       return () => {
         document.title = '博客';
       };
@@ -64,8 +60,8 @@ const Post: React.FunctionComponent<PostProps> = ({
     !loggedInUser ||
     !(
       data &&
-      (loggedInUser.followingUserIds.find(id => id === data.Post.user_id) ||
-        loggedInUser.id === data.Post.user_id)
+      (loggedInUser.followingUserIds.find(id => id === data?.Post?.user_id) ||
+        loggedInUser.id === data?.Post?.user_id)
     );
 
   // build all the mutations
@@ -156,6 +152,22 @@ const Post: React.FunctionComponent<PostProps> = ({
     },
     [loggedInUser, id],
   );
+
+  if (error || (commentsData && commentsData.error)) {
+    return <ErrorComponent />;
+  }
+
+  if (!loading && !data.Post) {
+    return (
+      <ErrorComponent
+        status="404"
+        title="抱歉，你访问的页面不存在"
+        buttonText="返回首页"
+        onRefresh={() => history.push('/')}
+        subTitle="可能是因为您的链接地址有误、该文章已经被作者删除或转为私密状态"
+      />
+    );
+  }
 
   return (
     <div

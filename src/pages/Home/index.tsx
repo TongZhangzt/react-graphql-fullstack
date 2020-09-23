@@ -55,10 +55,6 @@ const Home: React.FunctionComponent<HomeProps> = ({
     limit: 6,
   });
 
-  if (error) {
-    return <ErrorComponent></ErrorComponent>;
-  }
-
   const history = useHistory();
   const [hasMore, setHasMore] = React.useState<boolean>(true);
   const [onFollowUser] = followUserMutation(dispatch);
@@ -112,6 +108,10 @@ const Home: React.FunctionComponent<HomeProps> = ({
       }
     }, 1000);
   }, [data, hasMore]);
+
+  if (error) {
+    return <ErrorComponent></ErrorComponent>;
+  }
 
   return (
     <div className="home">
