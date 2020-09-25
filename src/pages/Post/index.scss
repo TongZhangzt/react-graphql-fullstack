@@ -69,7 +69,6 @@
           .follow-button {
             font-size: 12px;
             color: #ec7259;
-            background-color: #fff;
             border: 1px solid #ec7259;
             margin-left: 12px;
             border-radius: 12px;
@@ -139,11 +138,13 @@
             .follow-button {
               font-size: 12px;
               color: #ec7259;
-              background-color: #fff;
               border: 1px solid #ec7259;
               margin-left: 12px;
               border-radius: 12px;
-              padding: 2px 10px;
+              padding: 2px 5px;
+              height: 24px;
+              width: 46px;
+              justify-content: center;
             }
           }
 

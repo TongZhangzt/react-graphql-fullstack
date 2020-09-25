@@ -1,6 +1,6 @@
 # React + GraghQL + MySQL Fullstack blogpost web App
 
-A full-stack blog-post web app built with React.js(Typescript) + Redux on the frontend side and Express.js + GraphQL + MySQL/SQLite on the backend side.
+A full-stack blog-post web app built with React.js(Typescript) + Redux on the frontend side and Express.js + GraphQL + MySQL/SQLite on the backend side. Online Demo: http://112.126.56.73/
 
 #### 高仿简书 PC 端 UI，练手 Demo 项目，代码仅供学习和交流, 在线预览: http://112.126.56.73/
 

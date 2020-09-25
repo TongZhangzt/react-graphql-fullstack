@@ -1,5 +1,29 @@
 $grey: #969696;
 
+@media (min-width: 1200px) {
+  .navHeader-container {
+    .logo {
+      margin: 0 10rem 0 2rem;
+    }
+
+    .search-bar input {
+      width: 180px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .navHeader-container {
+    .logo {
+      margin: 0 2rem;
+    }
+
+    .search-bar input {
+      width: 80px;
+    }
+  }
+}
+
 .navHeader-container {
   width: 100%;
   height: 56px;
@@ -19,7 +43,6 @@ $grey: #969696;
     .logo {
       font-size: 24px;
       color: #ea6f5a;
-      margin: 0 10rem 0 2rem;
       min-width: fit-content;
     }
 
@@ -88,7 +111,6 @@ $grey: #969696;
         border: 0;
         outline: 0;
         background: transparent;
-        width: 180px;
         transition: width 0.5s;
 
         &::placeholder {

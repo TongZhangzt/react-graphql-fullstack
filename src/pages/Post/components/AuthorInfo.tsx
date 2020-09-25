@@ -32,9 +32,12 @@ export const AuthorInfo: React.FunctionComponent<AuthorInfoProps> = ({
               {postDetail.author.name}
             </a>
             {showFollowUser && (
-              <span className="follow-button has-link" onClick={onClickFollow}>
+              <div
+                className="follow-button has-link vertical-middle"
+                onClick={onClickFollow}
+              >
                 关注
-              </span>
+              </div>
             )}
           </div>
           <div className="meta">
