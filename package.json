@@ -12,7 +12,7 @@
   "description": "A fullstack blog-post web app built with React.js(Typescript) + GraphQL(Apollo)",
   "scripts": {
     "start": "concurrently \"npm run client\" \"npm run server\"",
-    "build": "NODE_ENV=production npm run clean && parcel build --log-level 1 src/index.html",
+    "build": "NODE_ENV=production npm run clean && parcel build --log-level 1 --no-source-maps src/index.html",
     "server": "nodemon --watch server/api_server ./server/api_server/index.js",
     "client": "node ./server/web_server/index.js",
     "clean": "rm -rf .cache dist",
