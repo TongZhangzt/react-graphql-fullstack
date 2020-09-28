@@ -3,6 +3,7 @@ const path = require('path');
 const Bundler = require('parcel-bundler');
 const dotenv = require('dotenv');
 const compression = require('compression');
+const rmdir = require('rimraf');
 
 const app = express();
 dotenv.config();
@@ -19,17 +20,22 @@ function shouldCompress(req, res) {
 }
 
 if (process.env.NODE_ENV !== 'production') {
-  const entry = path.resolve('src', 'index.html');
+  // remove the dist dir
+  rmdir(path.resolve(__dirname, '../../dist'), function(error) {});
+
+  const entry = path.resolve(__dirname, '../../src/index.html');
   let parcel = new Bundler(entry, {
     outDir: './dist/',
     logLevel: 1,
-    hmr: false,
+    hmr: true,
   });
   app.use(parcel.middleware());
 } else {
-  app.use(express.static(path.resolve('dist')));
+  app.use('/', express.static(path.resolve(__dirname, '../../dist')));
 
-  app.get('/*', (req, res) => res.sendFile(path.resolve('dist', 'index.html')));
+  app.get('/*', (req, res) =>
+    res.sendFile(path.resolve(__dirname, '../../dist', 'index.html')),
+  );
 }
 
 app.listen({ port: process.env.BASE_PORT }, () =>
